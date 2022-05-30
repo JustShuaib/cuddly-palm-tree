@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Spartan;
+  src: url("/font/Spartan-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Spartan;
+  font-size: 0.75rem;
+}

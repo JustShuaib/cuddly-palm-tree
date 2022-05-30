@@ -1,5 +1,4 @@
-import "./App.css";
-
+import "./Sass/global.scss";
 function App() {
   return <div>Hello from App</div>;
 }
