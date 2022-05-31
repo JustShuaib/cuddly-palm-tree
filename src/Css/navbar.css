@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Spartan;
+  src: url("/font/Spartan-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Spartan;
+  font-size: 0.75rem;
+}
+
+.nav {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 1.5rem 1rem;
+}
+@media screen and (min-width: 729px) {
+  .nav .hamburger {
+    display: none;
+  }
+}
+.nav p {
+  margin-left: 6rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.nav div {
+  display: none;
+  background-color: hsl(0deg, 0%, 63%);
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+}
+@media screen and (min-width: 729px) {
+  .nav div {
+    display: flex;
+    height: auto;
+    margin-left: 4rem;
+    background: transparent;
+  }
+}
+.nav div .close-btn {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (min-width: 729px) {
+  .nav div .close-btn {
+    display: none;
+  }
+}
+.nav div ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4rem;
+}
+@media screen and (min-width: 729px) {
+  .nav div ul {
+    background-color: transparent;
+    gap: 1.5rem;
+  }
+}
+.nav div ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+@media screen and (min-width: 729px) {
+  .nav div ul a {
+    color: white;
+  }
+}

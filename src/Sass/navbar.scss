@@ -1,0 +1,73 @@
+@use "global" as *;
+.nav {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 1.5rem 1rem;
+  .hamburger {
+    @media screen and (min-width: 729px) {
+      & {
+        display: none;
+      }
+    }
+  }
+  p {
+    margin-left: 6rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  div {
+    display: none;
+    background-color: $dark-gray;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    @media screen and (min-width: 729px) {
+      & {
+        display: flex;
+        height: auto;
+        margin-left: 4rem;
+        background: transparent;
+      }
+    }
+    .close-btn {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      @media screen and (min-width: 729px) {
+        & {
+          display: none;
+        }
+      }
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 4rem;
+      @media screen and (min-width: 729px) {
+        & {
+          background-color: transparent;
+          gap: 1.5rem;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        @media screen and (min-width: 729px) {
+          & {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
