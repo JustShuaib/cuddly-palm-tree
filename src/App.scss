@@ -1,3 +1,4 @@
+@use "./Sass/global" as global;
 .main {
   display: grid;
   @media screen and (min-width: 729px) {
@@ -11,7 +12,9 @@
     width: 100%;
     height: 100%;
   }
-
+  p {
+    color: global.$dark-gray;
+  }
   .hero {
     position: relative;
     @media screen and (min-width: 729px) {
@@ -46,7 +49,15 @@
       text-transform: uppercase;
       letter-spacing: 0.3rem;
       margin-top: 2rem;
-      display: block;
+      display: flex;
+      align-items: center;
+      column-gap: 1.5rem;
+      &:hover {
+        color: global.$dark-gray;
+      }
+      img {
+        width: 2.5rem;
+      }
     }
   }
 
@@ -98,5 +109,10 @@
     border: none;
     padding: 1rem 1.5rem;
     cursor: pointer;
+    @media screen and (min-width: 729px) {
+      &:hover {
+        background-color: global.$very-dark-gray;
+      }
+    }
   }
 }

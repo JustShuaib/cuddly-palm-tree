@@ -17,7 +17,7 @@
   }
   p {
     margin-left: 6rem;
-    color: white;
+    color: $white;
     font-weight: bold;
     font-size: 1.2rem;
   }
@@ -64,7 +64,19 @@
         font-weight: bold;
         @media screen and (min-width: 729px) {
           & {
-            color: white;
+            color: $white;
+          }
+          &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 0;
+            margin: 0.3rem auto 0 auto;
+            background-color: $white;
+            transition: all 0.3s linear;
+          }
+          &:hover::after {
+            width: 50%;
           }
         }
       }

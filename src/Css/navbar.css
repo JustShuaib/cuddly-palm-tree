@@ -30,7 +30,7 @@ body {
 }
 .nav p {
   margin-left: 6rem;
-  color: white;
+  color: hsl(0deg, 0%, 100%);
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -80,6 +80,18 @@ body {
 }
 @media screen and (min-width: 729px) {
   .nav div ul a {
-    color: white;
+    color: hsl(0deg, 0%, 100%);
+  }
+  .nav div ul a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    margin: 0.3rem auto 0 auto;
+    background-color: hsl(0deg, 0%, 100%);
+    transition: all 0.3s linear;
+  }
+  .nav div ul a:hover::after {
+    width: 50%;
   }
 }
