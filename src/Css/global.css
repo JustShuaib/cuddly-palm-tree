@@ -12,3 +12,9 @@ body {
   font-family: Spartan;
   font-size: 0.75rem;
 }
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

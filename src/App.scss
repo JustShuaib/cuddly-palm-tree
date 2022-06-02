@@ -106,9 +106,7 @@
   }
   button {
     background-color: black;
-    border: none;
     padding: 1rem 1.5rem;
-    cursor: pointer;
     @media screen and (min-width: 729px) {
       &:hover {
         background-color: global.$very-dark-gray;

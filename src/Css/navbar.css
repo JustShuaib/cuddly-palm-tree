@@ -13,15 +13,35 @@ body {
   font-size: 0.75rem;
 }
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .nav {
   position: absolute;
-  top: 1rem;
   left: 0;
   z-index: 2;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: transparent;
-  padding: 1.5rem 1rem;
+  width: 100%;
+  padding: 2.5rem 1rem;
+}
+@media screen and (min-width: 729px) {
+  .nav {
+    justify-content: flex-start;
+    padding-left: 3.5rem;
+    margin-top: 2rem;
+  }
+}
+.nav .hamburger {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 @media screen and (min-width: 729px) {
   .nav .hamburger {
@@ -29,60 +49,45 @@ body {
   }
 }
 .nav p {
-  margin-left: 6rem;
   color: hsl(0deg, 0%, 100%);
   font-weight: bold;
   font-size: 1.2rem;
+  margin-bottom: 0.3rem;
 }
-.nav div {
+.nav .nav-list {
   display: none;
-  background-color: hsl(0deg, 0%, 63%);
-  height: 0;
-  overflow: hidden;
-  margin: 0;
-  position: relative;
 }
 @media screen and (min-width: 729px) {
-  .nav div {
+  .nav .nav-list {
     display: flex;
-    height: auto;
     margin-left: 4rem;
-    background: transparent;
   }
-}
-.nav div .close-btn {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-@media screen and (min-width: 729px) {
-  .nav div .close-btn {
+  .nav .nav-list .close-btn {
     display: none;
   }
 }
-.nav div ul {
+.nav .nav-list ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 4rem;
 }
 @media screen and (min-width: 729px) {
-  .nav div ul {
+  .nav .nav-list ul {
     background-color: transparent;
-    gap: 1.5rem;
+    column-gap: 2rem;
   }
 }
-.nav div ul a {
+.nav .nav-list ul a {
   text-decoration: none;
-  color: black;
+  color: hsl(0deg, 0%, 0%);
   font-weight: bold;
 }
 @media screen and (min-width: 729px) {
-  .nav div ul a {
+  .nav .nav-list ul a {
     color: hsl(0deg, 0%, 100%);
   }
-  .nav div ul a::after {
+  .nav .nav-list ul a::after {
     content: "";
     display: block;
     height: 2px;
@@ -91,7 +96,28 @@ body {
     background-color: hsl(0deg, 0%, 100%);
     transition: all 0.3s linear;
   }
-  .nav div ul a:hover::after {
+  .nav .nav-list ul a:hover::after {
     width: 50%;
   }
+}
+.nav .show-nav-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.507);
+}
+.nav .show-nav-list .close-btn {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+.nav .show-nav-list ul {
+  height: 6rem;
+  width: 100%;
+  padding-left: 8rem;
+  background-color: hsl(0deg, 0%, 100%);
 }
