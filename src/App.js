@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import "./App.scss";
 import banner1 from "./images/mobile-image-hero-1.jpg";
@@ -51,13 +51,20 @@ function App() {
     setDetail((prev) => (prev < detailsArray.length - 1 ? prev + 1 : 0));
   };
 
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") handleNextSlide();
+      if (e.key === "ArrowLeft") handlePrevSlide();
+    });
+  }, []);
+
   return (
     <>
       <Navbar />
       <main className="main">
         <picture className="hero">
           <source
-            srcset={detailsArray[detail].desktopImg}
+            srcSet={detailsArray[detail].desktopImg}
             media="(min-width: 729px)"
           />
           <img src={detailsArray[detail].mobileImg} alt="" />
