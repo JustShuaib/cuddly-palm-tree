@@ -62,21 +62,23 @@ function App() {
     <>
       <Navbar />
       <main className="main">
-        <picture className="hero">
-          <source
-            srcSet={detailsArray[detail].desktopImg}
-            media="(min-width: 729px)"
-          />
-          <img src={detailsArray[detail].mobileImg} alt="" />
+        <div className="hero-container">
+          <picture>
+            <source
+              srcSet={detailsArray[detail].desktopImg}
+              media="(min-width: 729px)"
+            />
+            <img src={detailsArray[detail].mobileImg} alt="" />
+          </picture>
           <div className="slider-btn">
-            <button onClick={handlePrevSlide}>
+            <button onClick={handlePrevSlide} aria-label="previous slide">
               <img src={left} alt="" />
             </button>
-            <button onClick={handleNextSlide}>
+            <button onClick={handleNextSlide} aria-label="next slide">
               <img src={right} alt="" />
             </button>
           </div>
-        </picture>
+        </div>
         <section className="section-one">
           <h1> {detailsArray[detail].heading}</h1>
           <p>{detailsArray[detail].info}</p>

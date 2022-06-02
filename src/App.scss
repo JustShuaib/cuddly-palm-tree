@@ -13,9 +13,9 @@
     height: 100%;
   }
   p {
-    color: global.$dark-gray;
+    color: global.$very-dark-gray;
   }
-  .hero {
+  .hero-container {
     position: relative;
     @media screen and (min-width: 729px) {
       & {
